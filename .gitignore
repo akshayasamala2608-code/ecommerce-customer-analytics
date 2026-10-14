@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+
+# Raw dataset files
+data/raw/
+*.csv
+
+# Keep selected analysis outputs, but exclude large temporary files
+# Remove this rule if you intentionally want to upload every CSV
+# outputs/
+
+# Local databases and logs
+*.db
+*.sqlite
+*.log
+
+# Editor/system files
+.vscode/
+.DS_Store
+Thumbs.db
