@@ -1,7 +1,8 @@
 
 -- Project: E-commerce Customer Analytics
 -- File: 05_customer_segmentation.sql
--- Purpose: Group customers using their RFM scores.
+-- Purpose: Assign customer segments based on RFM scores.
+-- Documentation script: verify original rules before executing.
 
 USE ecommerce_analytics;
 
@@ -10,10 +11,11 @@ SELECT
     customer_unique_id,
     recency_days,
     frequency,
-    monetary,
+    monetary_value,
     R_score,
     F_score,
     M_score,
+    CONCAT(R_score, F_score, M_score) AS RFM_score,
     CASE
         WHEN R_score >= 4 AND F_score >= 4 AND M_score >= 4
             THEN 'Champions'
